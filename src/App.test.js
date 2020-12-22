@@ -7,7 +7,7 @@ import App from './App';
 const setup = (state = {}) => {
   const store = storeFactory(state);
   const wrapper = shallow(<App store={store} />).dive().dive();
-  console.log(wrapper.debug());
+  // console.log(wrapper.debug());
   return wrapper;
 };
 
@@ -23,7 +23,7 @@ test('rendder without error', () => {
   const currentUser = null;
   const wrapper = setup({ currentUser: currentUser });
   const homepage = findByTestAttr(wrapper, 'homepage');
-  console.log(homepage.debug());
+  // console.log(homepage.debug());
   expect(homepage.length).toBe(1)
 });
 
